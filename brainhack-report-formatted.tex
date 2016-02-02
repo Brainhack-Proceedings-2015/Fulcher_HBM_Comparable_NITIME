@@ -1,0 +1,285 @@
+%% BioMed_Central_Tex_Template_v1.06
+%%                                      %
+%  bmc_article.tex            ver: 1.06 %
+%                                       %
+
+%%IMPORTANT: do not delete the first line of this template
+%%It must be present to enable the BMC Submission system to
+%%recognise this template!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                     %%
+%%  LaTeX template for BioMed Central  %%
+%%     journal article submissions     %%
+%%                                     %%
+%%          <8 June 2012>              %%
+%%                                     %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% For instructions on how to fill out this Tex template           %%
+%% document please refer to Readme.html and the instructions for   %%
+%% authors page on the biomed central website                      %%
+%% http://www.biomedcentral.com/info/authors/                      %%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%% BioMed Central currently use the MikTex distribution of         %%
+%% TeX for Windows) of TeX and LaTeX.  This is available from      %%
+%% http://www.miktex.org                                           %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% additional documentclass options:
+%  [doublespacing]
+%  [linenumbers]   - put the line numbers on margins
+
+%%% loading packages, author definitions
+
+\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
+%\documentclass{bmcart}
+
+%%% Load packages
+\usepackage{amsthm,amsmath}
+\usepackage{siunitx}
+\usepackage{mfirstuc}
+%\RequirePackage{natbib}
+\usepackage[colorinlistoftodos]{todonotes}
+\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[htt]{hyphenat}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\def\includegraphic{}
+%\def\includegraphics{}
+
+%%% Put your definitions there:
+\startlocaldefs
+\endlocaldefs
+
+
+%%% Begin ...
+\begin{document}
+
+%%% Start of article front matter
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{Report from 2015 OHBM Hackathon (HI)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the title of your article here     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Inclusion of a Highly Comparable Time Series Analysis in NiTime}
+\vskip2ex
+\projectURL{Project URL: \url{http://github.com/nitime}}
+
+\author[
+addressref={aff1},
+corref={aff1},
+email={bfulcher@monash.edu.au}
+]{\inits{BF} \fnm{B} \snm{Fulcher}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors' addresses here        %%
+%%                                          %%
+%% Repeat \address commands as much as      %%
+%% required.                                %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[id=aff1]{%
+  \orgname{School of Psychological Sciences, Monash University},
+  \city{Melbourne},
+  \street{1 Queen Quay},
+  \postcode{55332},
+  %
+  \cny{Australia}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter short notes here                   %%
+%%                                          %%
+%% Short notes will be after addresses      %%
+%% on first page.                           %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{artnotes}
+\end{artnotes}
+
+%\end{fmbox}% comment this for two column layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Abstract begins here                 %%
+%%                                          %%
+%% Please refer to the Instructions for     %%
+%% authors on http://www.biomedcentral.com  %%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{abstractbox}
+
+%\begin{abstract} % abstract
+	
+%Blank Abstract
+
+%\end{abstract}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The keywords begin here                  %%
+%%                                          %%
+%% Put each keyword in separate \kwd{}.     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\vskip1ex
+
+%\projectURL{\url{http://github.com/nitime}}
+%\projectURL{http://github.com/nitime}
+
+% MSC classifications codes, if any
+%\begin{keyword}[class=AMS]
+%\kwd[Primary ]{}
+%\kwd{}
+%\kwd[; secondary ]{}
+%\end{keyword}
+
+%\end{abstractbox}
+%
+\end{fmbox}% uncomment this for twcolumn layout
+
+\end{frontmatter}
+
+%{\sffamily\bfseries\fontsize{10}{12}\selectfont Project URL: \url{http://github.com/nitime}}
+
+%%% Import the body from pandoc formatted text
+\section{Introduction}\label{introduction}
+
+To prepare a framework for implementing important time-series analysis
+features in python, for inclusion into NiTime \cite{Fulcher2013}, from
+an existing HCTSA package for highly comparative time-series analysis
+(Matlab-based).
+
+NiTime is python code for performing time-series analysis on
+neuroscience data. HCTSA is Matlab code for extracting thousands of
+structural features from a time series. We are currently applying the
+HCTSA code in Matlab to EEG and fMRI datasets to determine the most
+useful time-series features for these types of data.
+
+In order to achieve a simple applicability of HCTSA throughout the
+neuroscience community, it would be desirable to implement these sets of
+time-series analysis methods into the NiTime package or at least using
+the NiTime data format. This facilitates not only their application by
+the neuroscience community, but also their maintenance and development
+within an open source framework. Currently, there is no native python
+implementation of HCTSA. Therefore, HCTSA was not yet included into the
+NiTime package.
+
+\section{Approach}\label{approach}
+
+This is where the approach goes.
+
+\begin{figure}[h!]
+  \includegraphics[width=.47\textwidth]{nitime.png}
+  \caption{\label{centfig} Illustration of NiTime method.}
+\end{figure}
+
+\section{Results}\label{results}
+
+I successfully implemented a handful of basic time-series analysis
+functions from Matlab into python using partials, with basic support for
+the NiTime data format. A basic, proof-of-principle result is available
+\href{https://github.com/benfulcher/hctsa_python}{here}. This framework
+now allows time-series analysis methods, discovered using the HCTSA
+Matlab package, to be implemented in python in a systematic way (with
+support for the time-series format used in NiTime). This will allow
+future work on time series analysis to be incorporated straightforwardly
+into an open source environment.
+
+\section{Conclusions}\label{conclusions}
+
+This is were the conclusion goes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Backmatter begins here                   %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{backmatter}
+
+\section*{Availability of Supporting Data}
+More information about this project can be found at: \url{http://github.com/nitime}. Further data and files supporting this project are hosted in the \emph{GigaScience} repository REFXXX.
+
+\section*{Competing interests}
+None
+
+\section*{Author's contributions}
+BF wrote the software and the report.
+
+\section*{Acknowledgements}
+The authors would like to thank the organizers and attendees of the 2015
+OHBM Hackathon.
+
+  
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  The Bibliography                       %%
+%%                                                         %%
+%%  Bmc_mathpys.bst  will be used to                       %%
+%%  create a .BBL file for submission.                     %%
+%%  After submission of the .TEX file,                     %%
+%%  you will be prompted to submit your .BBL file.         %%
+%%                                                         %%
+%%                                                         %%
+%%  Note that the displayed Bibliography will not          %%
+%%  necessarily be rendered by Latex exactly as specified  %%
+%%  in the online Instructions for Authors.                %%
+%%                                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if your bibliography is in bibtex format, use those commands:
+\bibliographystyle{bmc-mathphys} % Style BST file
+\bibliography{brainhack-report} % Bibliography file (usually '*.bib' )
+
+\end{backmatter}
+\end{document}
