@@ -1,7 +1,7 @@
 ---
 event: '2015 OHBM Hackathon (HI)'
 
-title:  'Inclusion of Highly Comparable Time-Series Analysis in Nitime'
+title:  'Highly Comparable Time-Series Analysis in Nitime'
 
 author:
 
@@ -46,7 +46,7 @@ In order to apply highly comparative time-series analysis in the neuroscience co
 
 # Approach
 An illustration of the approach is shown in Fig. \ref{centfig}. Each time series is converted to a vector of thousands of informative features using the *hctsa* package, and then machine learning methods are used to determine the most useful features.
-In this project, we want to demonstrate a feasible pathway for incorporating these useful features into the Nitime package.
+In this project, we wanted to demonstrate a feasible pathway for incorporating these useful features into the Nitime package.
 
 \begin{figure}[h!]
   \includegraphics[width=.47\textwidth]{nitime.png}
