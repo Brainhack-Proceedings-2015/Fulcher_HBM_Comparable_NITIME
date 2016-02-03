@@ -39,7 +39,7 @@ gigascience-ref: REFXXX
 # Introduction
 The aim of this project was to begin to extend an existing Matlab-based package for implementing thousands of time-series analysis methods, [hctsa](https://github.com/benfulcher/hctsa), to a python-based implementation, for potential future inclusion into [Nitime](http://nipy.org/nitime/).
 
-Nitime is python-based package for performing time-series analysis on neuroscience data. The highly comparative time-series analysis approach \cite{Fulcher2013} has an associated Matlab-based code package, *hctsa*, that extracts thousands of structural features from a time series and determines which are most useful for a given scientific task.
+Nitime is python-based package for performing time-series analysis on neuroscience data. The highly comparative time-series analysis approach \cite{Fulcher2013} has an associated [website](www.comp-engine.org/timeseries) and Matlab-based code package, *hctsa*, that extracts thousands of structural features from a time series and determines which are most useful for a given scientific task.
 <!-- We are currently applying the hctsa package to EEG and fMRI datasets to determine the most useful time-series features for predicting disease labels from these types of data. -->
 
 In order to apply highly comparative time-series analysis in the neuroscience community, it would be desirable to implement some time-series analysis methods into the Nitime package, or at least using the Nitime data format. This would facilitate not only their use by the neuroscience community, but also their maintenance and development within an open source framework.
