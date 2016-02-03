@@ -102,13 +102,13 @@
 
 \title{Inclusion of a Highly Comparable Time Series Analysis in NiTime}
 \vskip2ex
-\projectURL{Project URL: \url{http://github.com/nitime}}
+\projectURL{Project URL: \url{https://github.com/benfulcher/hctsa\_python}}
 
 \author[
 addressref={aff1},
 corref={aff1},
-email={bfulcher@monash.edu.au}
-]{\inits{BF} \fnm{B} \snm{Fulcher}}
+email={ben.fulcher@monash.edu}
+]{\inits{BDF} \fnm{Ben D.} \snm{Fulcher}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -120,10 +120,11 @@ email={bfulcher@monash.edu.au}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \address[id=aff1]{%
-  \orgname{School of Psychological Sciences, Monash University},
+  \orgname{Monash Institute of Cognitive and Clinical Neurosciences, Monash
+University},
   \city{Melbourne},
-  \street{1 Queen Quay},
-  \postcode{55332},
+  \street{770 Blackburn Rd},
+  \postcode{3168},
   %
   \cny{Australia}
 }
@@ -173,8 +174,8 @@ email={bfulcher@monash.edu.au}
 
 %\vskip1ex
 
-%\projectURL{\url{http://github.com/nitime}}
-%\projectURL{http://github.com/nitime}
+%\projectURL{\url{https://github.com/benfulcher/hctsa\_python}}
+%\projectURL{https://github.com/benfulcher/hctsa\_python}
 
 % MSC classifications codes, if any
 %\begin{keyword}[class=AMS]
@@ -189,55 +190,59 @@ email={bfulcher@monash.edu.au}
 
 \end{frontmatter}
 
-%{\sffamily\bfseries\fontsize{10}{12}\selectfont Project URL: \url{http://github.com/nitime}}
+%{\sffamily\bfseries\fontsize{10}{12}\selectfont Project URL: \url{https://github.com/benfulcher/hctsa\_python}}
 
 %%% Import the body from pandoc formatted text
 \section{Introduction}\label{introduction}
 
-To prepare a framework for implementing important time-series analysis
-features in python, for inclusion into NiTime \cite{Fulcher2013}, from
-an existing HCTSA package for highly comparative time-series analysis
-(Matlab-based).
+The aim of this project was to begin to extend an existing Matlab-based
+package for implementing thousands of time-series analysis methods,
+\href{https://github.com/benfulcher/hctsa}{hctsa}, to a python-based
+implementation, for potential future inclusion into
+\href{http://nipy.org/nitime/}{Nitime}.
 
-NiTime is python code for performing time-series analysis on
-neuroscience data. HCTSA is Matlab code for extracting thousands of
-structural features from a time series. We are currently applying the
-HCTSA code in Matlab to EEG and fMRI datasets to determine the most
-useful time-series features for these types of data.
+Nitime is python-based package for performing time-series analysis on
+neuroscience data. The highly comparative time-series analysis approach
+\cite{Fulcher2013} has an associated Matlab-based code package,
+\emph{hctsa}, that extracts thousands of structural features from a time
+series and determines which are most useful for a given scientific task.
 
-In order to achieve a simple applicability of HCTSA throughout the
-neuroscience community, it would be desirable to implement these sets of
-time-series analysis methods into the NiTime package or at least using
-the NiTime data format. This facilitates not only their application by
-the neuroscience community, but also their maintenance and development
-within an open source framework. Currently, there is no native python
-implementation of HCTSA. Therefore, HCTSA was not yet included into the
-NiTime package.
+In order to apply highly comparative time-series analysis in the
+neuroscience community, it would be desirable to implement some
+time-series analysis methods into the Nitime package, or at least using
+the Nitime data format. This would facilitate not only their use by the
+neuroscience community, but also their maintenance and development
+within an open source framework.
 
 \section{Approach}\label{approach}
 
-This is where the approach goes.
+An illustration of the approach is shown in Fig. \ref{centfig}. Each
+time series is converted to a vector of thousands of informative
+features using the \emph{hctsa} package, and then machine learning
+methods are used to determine the most useful features. In this project,
+we want to demonstrate a feasible pathway for incorporating these useful
+features into the Nitime package.
 
 \begin{figure}[h!]
   \includegraphics[width=.47\textwidth]{nitime.png}
-  \caption{\label{centfig} Illustration of NiTime method.}
+  \caption{\label{centfig} Illustration of the highly comparative approach to time-series data from neuroscience.}
 \end{figure}
 
 \section{Results}\label{results}
 
 I successfully implemented a handful of basic time-series analysis
 functions from Matlab into python using partials, with basic support for
-the NiTime data format. A basic, proof-of-principle result is available
-\href{https://github.com/benfulcher/hctsa_python}{here}. This framework
-now allows time-series analysis methods, discovered using the HCTSA
-Matlab package, to be implemented in python in a systematic way (with
-support for the time-series format used in NiTime). This will allow
-future work on time series analysis to be incorporated straightforwardly
-into an open source environment.
+the Nitime data format. This proof-of-principle is
+\href{https://github.com/benfulcher/hctsa_python}{here}.
 
 \section{Conclusions}\label{conclusions}
 
-This is were the conclusion goes.
+Our results demonstrate that time-series analysis methods, discovered
+using the \href{https://github.com/benfulcher/hctsa}{hctsa package}, can
+be implemented natively in python in a systematic way, with support for
+the time-series format used in Nitime. This will allow future work on
+time-series analysis to be incorporated straightforwardly into an open
+source environment.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -248,7 +253,7 @@ This is were the conclusion goes.
 \begin{backmatter}
 
 \section*{Availability of Supporting Data}
-More information about this project can be found at: \url{http://github.com/nitime}. Further data and files supporting this project are hosted in the \emph{GigaScience} repository REFXXX.
+More information about this project can be found at: \url{https://github.com/benfulcher/hctsa\_python}. Further data and files supporting this project are hosted in the \emph{GigaScience} repository REFXXX.
 
 \section*{Competing interests}
 None
