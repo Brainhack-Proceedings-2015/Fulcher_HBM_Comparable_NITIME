@@ -216,22 +216,21 @@ basic statistics of the distribution, linear correlation structure,
 stationarity, information theoretic and entropy measures, methods from
 the physical nonlinear time-series analysis literature, linear and
 nonlinear model fits, and others. Thus, hctsa can be used to map a time
-series to a comprehensive vector of structural features and these
-features can then be systematically compared to determine and interpret
-the most useful features for a given scientific objective.
+series to a comprehensive vector of interpretable structural features
+and these features can then be systematically compared to determine and
+understand the most useful features for a given scientific objective
+(e.g., features of an EEG signal that help classify different patient
+groups).
 
 In order to apply highly comparative time-series analysis in the
 neuroscience community, it would be desirable to implement some
 time-series analysis methods into
 \href{http://nipy.org/nitime/}{Nitime}, a python-based software package
-for performing time-series analysis on neuroscience data. While the
-Nitime data format supports unevenly sampled data, \emph{hctsa} does
-not; although for evenly sampled data it is trivial to extract the data
-vector from the Nitime Timeseries class and run important time-series
-algorithms on these data vectors. Implementation of useful time-series
-features into python, and potential integration with Nitime, would not
-only facilitate their use by the neuroscience community, but also their
-maintenance and development within an open source framework.
+for performing time-series analysis on neuroscience data. Implementation
+of useful time-series features into python, and potential integration
+with Nitime, would not only facilitate their use by the neuroscience
+community, but also their maintenance and development within an open
+source framework.
 
 \section{Approach}\label{approach}
 
@@ -252,18 +251,24 @@ package.
 \section{Results}\label{results}
 
 I successfully implemented a handful of basic time-series analysis
-functions from Matlab into python using partials, with basic support for
-the Nitime data format. This proof-of-principle is
+functions from Matlab into python using partials, with full support for
+vectors of data stored in numpy arrays, and basic support for the Nitime
+data format (extracting the data vector from the Nitime TimeSeries class
+for evenly sampled data). This proof-of-principle is
 \href{https://github.com/benfulcher/hctsa_python}{here}.
 
 \section{Conclusions}\label{conclusions}
 
 Our results demonstrate that time-series analysis methods, discovered
 using the \href{https://github.com/benfulcher/hctsa}{hctsa package}, can
-be implemented natively in python in a systematic way, with support for
-the time-series format used in Nitime. This will help facilitate future
-work on time-series analysis to be incorporated straightforwardly into
-an open source environment.
+be implemented natively in python in a systematic way, with basic
+support for the time-series format used in Nitime. This will help
+facilitate future work on time-series analysis to be incorporated
+straightforwardly into this open source environment. Although there are
+no plans to reimplement the full \emph{hctsa} feature library in python,
+our hope is that published work describing useful time-series features
+(discovered using the \emph{hctsa} library) can also contribute a python
+implementation, to promote its use by the neuroscience community.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
