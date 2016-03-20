@@ -61,8 +61,9 @@ In this project, we wanted to demonstrate a feasible pathway for incorporating t
 
 
 # Results
-I successfully implemented a handful of basic time-series analysis functions from Matlab into python using partials, with full support for vectors of data stored in numpy arrays, and basic support for the Nitime data format (extracting the data vector from the Nitime TimeSeries class for evenly sampled data).
-This proof-of-principle is [here](https://github.com/benfulcher/hctsa_python).
+I successfully implemented a handful of basic time-series analysis functions from Matlab into python using partials (a python function that freezes a given set of input arguments to a more general function).
+The proof-of-principle implementation has full support for vectors of data stored in numpy arrays, and basic support for the Nitime data format (extracting the data vector from the Nitime TimeSeries class for evenly sampled data).
+The code is [here](https://github.com/benfulcher/hctsa_python).
 
 # Conclusions
 Our results demonstrate that time-series analysis methods, discovered using the [hctsa package](https://github.com/benfulcher/hctsa), can be implemented natively in python in a systematic way, with basic support for the time-series format used in Nitime.
