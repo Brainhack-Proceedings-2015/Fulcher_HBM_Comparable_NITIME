@@ -33,7 +33,7 @@ contrib: BF wrote the software and the report.
 
 bibliography: brainhack-report
 
-gigascience-ref: REFXXX
+gigascience-ref: \href{http://gigadb.org/dataset/100225}{doi:10.5524/100225}
 ...
 
 # Introduction
